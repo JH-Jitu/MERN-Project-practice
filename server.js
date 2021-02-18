@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const fileUpload = require('express-fileupload');
 const cookieParser = require('cookie-parser');
+// Node Mailer
+const nodemailer = require('nodemailer');
 
 
 const app = express();
@@ -17,6 +19,7 @@ app.use(fileUpload({
 
 //Routes 
 app.use('/user', require('./routes/userRouter'));
+app.use('/api', require('./routes/categoryRouter'));
 
 
 //Connect to mongoDB 
