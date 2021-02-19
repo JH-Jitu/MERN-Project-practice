@@ -7,7 +7,7 @@ router.route('/products')
     .post(productCtrl.createProduct)
 
 
-router.route('/products')
+router.route('/products/:id')
     .delete(productCtrl.deleteProduct)
     .put(productCtrl.updateProduct)
 
